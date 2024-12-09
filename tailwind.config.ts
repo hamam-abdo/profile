@@ -103,8 +103,8 @@ export default {
       addUtilities({
         ".text-fill-color": {
           "-webkit-text-fill-color": "transparent", // جعل النص شفافًا
-          "-webkit-text-stroke-width": "1.4px", // إضافة حدود للنص بعرض 1.4px
-          // "-webkit-text-stroke-color": "#fff", // تحديد لون الحدود إلى الأبيض
+          "-webkit-text-stroke-width": "1px", // إضافة حدود للنص بعرض 1.4px
+
           "-webkit-background-clip": "text", // تطبيق التدرج على النص
 
           "background-image":
