@@ -38,7 +38,7 @@ export default function Home() {
                 
               "
         >
-          <h1 className="text-fill-color text-8xl  !leading-[1.2] sm:text-9xl  text-center font-bold   animate-[textGradient_2s_ease_infinite] ">
+          <h1 className="text-fill-color text-8xl  !leading-[1.2] sm:text-9xl  text-center font-bold    ">
             {" "}
             Hamam Sadek
           </h1>

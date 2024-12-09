@@ -107,9 +107,9 @@ export default {
           "-webkit-text-stroke-color": "#fff", // تحديد لون الحدود إلى الأبيض
           "-webkit-background-clip": "text", // تطبيق التدرج على النص
 
-          "background-image":
-            "linear-gradient(90deg, #0ea5ea, #0bd1d1, #0ea5ea)", // التدرج اللوني
-          "background-size": "200% 100%", // التدرج اللوني
+          // "background-image":
+          //   "linear-gradient(90deg, #0ea5ea, #0bd1d1, #0ea5ea)", // التدرج اللوني
+          // "background-size": "200% 100%", // التدرج اللوني
         },
 
         ".text-gradient": {
