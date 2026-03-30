@@ -153,7 +153,7 @@ export const projects = [
 export const socialLinks = [
   {
     icon: <TiSocialFacebookCircular size={30} />,
-    url: "https://www.facebook.com/profile.php?id=100076514415204",
+    url: "https://www.facebook.com/profile.php?id=61584238953915",
   },
   {
     icon: <VscGithub size={25} />,
@@ -161,6 +161,6 @@ export const socialLinks = [
   },
   {
     icon: <CiLinkedin size={25} />,
-    url: "www.linkedin.com/in/hamam-sadek",
+    url: "https://www.linkedin.com/in/hamam-sadek/",
   },
 ];
