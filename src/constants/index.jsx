@@ -13,7 +13,7 @@ export const navLinks = [
   },
   {
     title: "CV",
-    path: "https://drive.google.com/file/d/1LKuCMqHaYSTZd3OjEYsUj6fo6z1ybjpE/view",
+    path: "https://drive.google.com/file/d/18dS_SSZYNmaUFyqNgNQP6kBxEwr4Q464/view",
     target: "_blank",
     rel: "noopener noreferrer",
   },
@@ -138,6 +138,16 @@ export const projects = [
       "https://www.linkedin.com/posts/hamam-abdulrahman-b1467b25b_nextjs-supabase-ecommerce-activity-7267551794224848897-OUtH?utm_source=share&utm_medium=member_desktop",
     imge: "/Exclusive.png",
   },
+   {
+    title: "Zawwaqa",
+    description:
+      "An interactive food discovery application designed to connect food enthusiasts with the best local restaurants through user-generated ratings, visual reviews, and location-based recommendations.",
+    category: "Next.js",
+    live: "https://zawwaqa.vercel.app/",
+    video:
+      "https://www.linkedin.com/posts/hamam-sadek_aeyaewaffaepaeqaer-zawwaqa-foodreview-activity-7401197240314224640-v8Fh?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD_-P4ABudhGpTsxX5uc96YG_vhpRd9UZro",
+    imge: "/Zawwaqa.png",
+  },
 ];
 
 export const socialLinks = [
@@ -151,6 +161,6 @@ export const socialLinks = [
   },
   {
     icon: <CiLinkedin size={25} />,
-    url: "https://www.linkedin.com/in/hamam-abdulrahman-b1467b25b/",
+    url: "www.linkedin.com/in/hamam-sadek",
   },
 ];
