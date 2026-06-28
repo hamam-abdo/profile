@@ -223,35 +223,16 @@ body::before {
 .project-img {
   object-fit: cover;
   object-position: top;
-  transition: object-position 1.2s ease;
 }
 
-/* Desktop / mouse: pan the full screenshot on hover */
-@media (hover: hover) {
+/* Desktop / mouse only: pan the full screenshot on hover.
+   On touch devices the image stays static (object-position: top) for
+   performance — animating many images at once is heavy on mobile. */
+@media (hover: hover) and (pointer: fine) {
+  .project-img {
+    transition: object-position 1.2s ease;
+  }
   .group:hover .project-img {
     object-position: bottom;
-  }
-}
-
-/* Touch devices (no hover): gently auto-pan so the whole page is visible */
-@media (hover: none) {
-  .project-img {
-    animation: autoPan 7s ease-in-out infinite alternate;
-  }
-}
-
-@keyframes autoPan {
-  from {
-    object-position: top;
-  }
-  to {
-    object-position: bottom;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .project-img {
-    animation: none;
-    object-position: center;
   }
 }
