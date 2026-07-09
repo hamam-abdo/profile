@@ -33,7 +33,7 @@ export const navLinks = [
   { path: "#contact", title: "Contact" },
   {
     title: "Resume",
-    path: "https://drive.google.com/file/d/18dS_SSZYNmaUFyqNgNQP6kBxEwr4Q464/view",
+    path:  "https://drive.google.com/file/d/1DO84q6yf4Us2pfOZkj8GFzc-tJo7TVIs/view",
     target: "_blank",
     rel: "noopener noreferrer",
   },
