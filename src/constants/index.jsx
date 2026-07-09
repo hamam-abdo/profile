@@ -12,7 +12,7 @@ export const profile = {
     "I build fast, accessible and beautiful web interfaces with modern technologies.",
   bio: "I'm a Front-End Developer focused on turning ideas into clean, responsive and performant web experiences. I work mainly with React, Next.js and Tailwind CSS, and I love crafting interfaces that feel smooth and intuitive across every device.",
   email: "hamamabdo002@gmail.com",
-  cv: "https://drive.google.com/file/d/1DO84q6yf4Us2pfOZkj8GFzc-tJo7TVIs/view",
+  cv: "https://drive.google.com/uc?export=download&id=1DO84q6yf4Us2pfOZkj8GFzc-tJo7TVIs",
   location: "Egypt",
   // Paste your Formspree endpoint here (https://formspree.io) to receive
   // messages directly in your inbox. Leave empty to fall back to mailto.
