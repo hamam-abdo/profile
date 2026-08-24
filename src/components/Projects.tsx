@@ -1,17 +1,11 @@
 "use client";
 import { useState } from "react";
-import { projects } from "@/constants";
+import { projects, earlierWork } from "@/constants";
 import Image from "next/image";
 import { FaPlayCircle, FaExternalLinkAlt } from "react-icons/fa";
 import Reveal from "./Reveal";
 
-const categories = [
-  "All Projects",
-  "HTML & CSS",
-  "JavaScript",
-  "React",
-  "Next.js",
-];
+const categories = ["All Projects", "Next.js", "React"];
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All Projects");
@@ -117,6 +111,36 @@ export default function Projects() {
           </Reveal>
         ))}
       </div>
+
+      {/* Earlier work — compact, so the featured projects stay the focus */}
+      {selectedCategory === "All Projects" && (
+        <Reveal className="mt-16" delay={100}>
+          <div className="rounded-2xl border border-line bg-card/40 p-6 sm:p-8">
+            <h3 className="text-lg font-semibold text-white">Earlier Work</h3>
+            <p className="mt-1 max-w-2xl text-sm text-gray-400">
+              Corporate sites and landing pages built with HTML, CSS and
+              JavaScript — all fully responsive and cross-browser tested.
+            </p>
+
+            <ul className="mt-6 flex flex-wrap gap-3">
+              {earlierWork.map((item) => (
+                <li key={item.title}>
+                  <a
+                    href={item.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 rounded-full border border-line bg-ink/60 px-4 py-2 text-sm text-gray-300 transition-colors hover:border-accent/60 hover:text-accent"
+                  >
+                    {item.title}
+                    <span className="text-xs text-gray-500">{item.tech}</span>
+                    <FaExternalLinkAlt size={10} className="opacity-60" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
+      )}
     </section>
   );
 }

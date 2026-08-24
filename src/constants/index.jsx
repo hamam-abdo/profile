@@ -7,10 +7,10 @@ import { FaDatabase } from "react-icons/fa";
 /* Personal info ------------------------------------------------- */
 export const profile = {
   name: "Hamam Sadek",
-  roles: ["Front-End Developer", "React & Next.js Developer", "UI Enthusiast"],
+  roles: ["Front-End Developer", "React & Next.js Developer", "SaaS Builder"],
   tagline:
-    "I build fast, accessible and beautiful web interfaces with modern technologies.",
-  bio: "I'm a Front-End Developer focused on turning ideas into clean, responsive and performant web experiences. I work mainly with React, Next.js and Tailwind CSS, and I love crafting interfaces that feel smooth and intuitive across every device.",
+    "I build production-ready web applications — from the first component to the deploy.",
+  bio: "I'm a Front-End Developer building fast, accessible web applications with Next.js, React and TypeScript — and I take them all the way to production with Prisma, PostgreSQL and Supabase. Most recently I designed, built and shipped Orderly single-handedly: a multi-tenant SaaS for restaurants with real-time ordering, role-based dashboards, an offline-first PWA and full Arabic/English support.",
   email: "hamamabdo002@gmail.com",
   cv: "https://drive.google.com/uc?export=download&id=1b2-KvPtzDqxKGkSdaL9LgjzYqcaz8Pfw",
   location: "Egypt",
@@ -20,9 +20,9 @@ export const profile = {
 };
 
 export const stats = [
-  { value: "10+", label: "Projects" },
-  { value: "12+", label: "Technologies" },
-  { value: "2+", label: "Years Coding" },
+  { value: "12", label: "Projects Shipped" },
+  { value: "15+", label: "Technologies" },
+  { value: "2+", label: "Years Experience" },
 ];
 
 export const navLinks = [
@@ -76,74 +76,59 @@ export const skillGroups = [
  */
 export const projects = [
   {
-    title: "Primary",
+    title: "Orderly",
     description:
-      "A clean and modern website designed to showcase educational content with a focus on simplicity and accessibility.",
-    category: "HTML & CSS",
-    tech: ["HTML", "CSS"],
-    live: "https://hamam-abdo.github.io/Primary/",
-    imge: "/Primary.png",
+      "A multi-tenant SaaS platform for restaurants, built solo from database design to deployment. QR-code menu ordering for guests, plus role-based dashboards for admin, cashier, kitchen and waiter — with real-time order sync, offline-first support and full Arabic/English localization.",
+    category: "Next.js",
+    featured: true,
+    highlights: [
+      "Multi-tenant SaaS with role-based dashboards",
+      "Real-time order sync across every device (Pusher)",
+      "Offline-first PWA — keeps working when the network drops",
+      "Full Arabic/English localization with RTL support",
+    ],
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "Pusher",
+      "PWA",
+      "Tailwind CSS",
+    ],
+    live: "https://orderly-wine.vercel.app/en-US",
+    video:
+      "https://www.linkedin.com/posts/hamam-sadek_saas-foodtech-restauranttech-ugcPost-7476627452656685056-YW5r/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD_-P4ABudhGpTsxX5uc96YG_vhpRd9UZro",
+    imge: "/Orderly.png",
   },
   {
-    title: "DGcom",
+    title: "Zawwaqa",
     description:
-      "A dynamic and professional corporate website for showcasing business services and offerings.",
-    category: "HTML & CSS",
-    tech: ["HTML", "CSS"],
-    live: "https://hamam-abdo.github.io/DGcom/",
-    imge: "/DGcom.png",
+      "A restaurant discovery platform with server-side rendering for fast first paint and indexable pages. Multi-criteria search and filtering with URL-synced state, Google Maps integration for location-based browsing, and a Supabase data layer for reviews and ratings.",
+    category: "Next.js",
+    tech: ["Next.js", "TypeScript", "Supabase", "Google Maps", "Tailwind CSS"],
+    live: "https://zawwaqa.vercel.app/",
+    video:
+      "https://www.linkedin.com/posts/hamam-sadek_aeyaewaffaepaeqaer-zawwaqa-foodreview-activity-7401197240314224640-v8Fh?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD_-P4ABudhGpTsxX5uc96YG_vhpRd9UZro",
+    imge: "/Zawwaqa.png",
   },
   {
-    title: "Pioneer",
+    title: "Exclusive",
     description:
-      "A sleek and responsive landing page tailored for promoting innovative tech solutions.",
-    category: "HTML & CSS",
-    tech: ["HTML", "CSS"],
-    live: "https://hamam-abdo.github.io/Pioneer/",
-    imge: "/Pioneer.png",
-  },
-  {
-    title: "Special Design",
-    description:
-      "A visually appealing website focused on creative design and showcasing artistic projects.",
-    category: "JavaScript",
-    tech: ["HTML", "CSS", "JavaScript"],
-    live: "https://hamam-abdo.github.io/Special-Design/",
-    imge: "/Special.png",
-  },
-  {
-    title: "BigTech",
-    description:
-      "A modern website tailored for a tech-focused company, emphasizing innovation and technology services.",
-    category: "JavaScript",
-    tech: ["HTML", "CSS", "JavaScript"],
-    live: "https://hamam-abdo.github.io/BigTech/",
-    imge: "/BigTech.png",
-  },
-  {
-    title: "Artelligence",
-    description:
-      "A website dedicated to showcasing artificial intelligence solutions and creative applications.",
-    category: "JavaScript",
-    tech: ["HTML", "CSS", "JavaScript"],
-    live: "https://hamam-abdo.github.io/Artelligence/",
-    imge: "/Artelligence.png",
-  },
-  {
-    title: "Techwix",
-    description:
-      "A website for a tech-oriented brand featuring a clean layout and modern design elements.",
-    category: "JavaScript",
-    tech: ["HTML", "CSS", "JavaScript"],
-    live: "https://hamam-abdo.github.io/Techwix/",
-    imge: "/Techwix.png",
+      "A full-stack e-commerce store covering the complete flow — catalog, product details, cart management and checkout. Authentication and session handling with Supabase Auth, including protected routes and persisted cart state on a mobile-first layout.",
+    category: "Next.js",
+    tech: ["Next.js", "Supabase Auth", "REST APIs", "Tailwind CSS"],
+    live: "https://exclusive-mauve.vercel.app/",
+    video:
+      "https://www.linkedin.com/posts/hamam-abdulrahman-b1467b25b_nextjs-supabase-ecommerce-activity-7267551794224848897-OUtH?utm_source=share&utm_medium=member_desktop",
+    imge: "/Exclusive.png",
   },
   {
     title: "XStore",
     description:
-      "A customer-focused e-commerce platform with an intuitive interface for browsing products and placing orders.",
+      "A fast e-commerce single page application with client-side routing and a centralized Redux Toolkit store for cart, filters and user state. Perceived load time reduced through code splitting, lazy-loaded routes and optimized image delivery.",
     category: "React",
-    tech: ["React", "Tailwind CSS"],
+    tech: ["Vite", "React", "Redux Toolkit", "Axios", "Tailwind CSS"],
     live: "https://xstore-app.netlify.app/#/Home",
     video:
       "https://www.linkedin.com/posts/hamam-abdulrahman-b1467b25b_html-tailwind-react-activity-7203860224745652225-DL6s?utm_source=share&utm_medium=member_desktop",
@@ -152,54 +137,29 @@ export const projects = [
   {
     title: "Order Easy",
     description:
-      "A restaurant ordering system enabling customers to choose tables, browse the menu, and place orders seamlessly, with administrative features for order and table management.",
+      "A restaurant ordering system enabling customers to choose tables, browse the menu and place orders seamlessly, with an admin panel for managing orders and tables in real time.",
     category: "React",
-    tech: ["React", "Firebase"],
+    tech: ["React", "Firebase", "Tailwind CSS"],
     live: "https://test-834f5.web.app/",
     video:
       "https://www.linkedin.com/posts/hamam-abdulrahman-b1467b25b_technology-development-programming-activity-7226992840717815808-8p8t?utm_source=share&utm_medium=member_desktop",
     imge: "/Order.png",
   },
-  {
-    title: "Exclusive",
-    description:
-      "A fully functional e-commerce platform offering a complete experience for customers, including order management, payments, and product handling.",
-    category: "Next.js",
-    tech: ["Next.js", "Supabase", "Tailwind CSS"],
-    live: "https://exclusive-mauve.vercel.app/",
-    video:
-      "https://www.linkedin.com/posts/hamam-abdulrahman-b1467b25b_nextjs-supabase-ecommerce-activity-7267551794224848897-OUtH?utm_source=share&utm_medium=member_desktop",
-    imge: "/Exclusive.png",
-  },
-  {
-    title: "Zawwaqa",
-    description:
-      "An interactive food discovery application designed to connect food enthusiasts with the best local restaurants through user-generated ratings, visual reviews, and location-based recommendations.",
-    category: "Next.js",
-    tech: ["Next.js", "Supabase", "Tailwind CSS"],
-    live: "https://zawwaqa.vercel.app/",
-    video:
-      "https://www.linkedin.com/posts/hamam-sadek_aeyaewaffaepaeqaer-zawwaqa-foodreview-activity-7401197240314224640-v8Fh?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD_-P4ABudhGpTsxX5uc96YG_vhpRd9UZro",
-    imge: "/Zawwaqa.png",
-  },
-  {
-    title: "Orderly",
-    description:
-      "A full SaaS platform for restaurants — digital menus, QR-code ordering, table management and a powerful admin dashboard. Built with internationalization (i18n) support for a seamless multi-language experience.",
-    category: "Next.js",
-    featured: true,
-    highlights: [
-      "Multi-language (i18n) SaaS architecture",
-      "QR-code based digital menu & ordering",
-      "Real-time order & table management",
-      "Admin dashboard with analytics",
-    ],
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Neon", "i18n"],
-    live: "https://orderly-wine.vercel.app/en-US",
-    video:
-      "https://www.linkedin.com/posts/hamam-sadek_saas-foodtech-restauranttech-ugcPost-7476627452656685056-YW5r/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD_-P4ABudhGpTsxX5uc96YG_vhpRd9UZro",
-    imge: "/Orderly.png",
-  }
+];
+
+/*
+ * Earlier work — corporate sites and landing pages built with plain
+ * HTML/CSS/JS. Rendered as a compact list under the main grid so the
+ * featured projects above stay the focus.
+ */
+export const earlierWork = [
+  { title: "Techwix", tech: "JavaScript", live: "https://hamam-abdo.github.io/Techwix/" },
+  { title: "Artelligence", tech: "JavaScript", live: "https://hamam-abdo.github.io/Artelligence/" },
+  { title: "BigTech", tech: "JavaScript", live: "https://hamam-abdo.github.io/BigTech/" },
+  { title: "Special Design", tech: "JavaScript", live: "https://hamam-abdo.github.io/Special-Design/" },
+  { title: "Pioneer", tech: "HTML & CSS", live: "https://hamam-abdo.github.io/Pioneer/" },
+  { title: "DGcom", tech: "HTML & CSS", live: "https://hamam-abdo.github.io/DGcom/" },
+  { title: "Primary", tech: "HTML & CSS", live: "https://hamam-abdo.github.io/Primary/" },
 ];
 
 export const socialLinks = [
