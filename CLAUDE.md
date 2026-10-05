@@ -16,6 +16,8 @@
   bars, icon grids, "Hi, I'm…"), an over-animated Dribbble showcase, or a
   plain CV page.
 - **Language/direction:** English
+- **Production URL:** https://hamam-sadek.vercel.app
+
 
 ## Stack
 <!-- Claude: if any field below is still a placeholder, fill it from the code
@@ -39,5 +41,8 @@
   before reporting completion.
 - When a design decision is approved (colours, fonts, layout rule, git tag),
   append it to "Design decisions" with the date.
+- For SEO, metadata, sitemap, robots or launch work, use the `seo` skill.
+  Before reporting any new or changed page as done, run its audit on a
+  production build and fix what fails.
 
 ## Design decisions (append as they're made)
