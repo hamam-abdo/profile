@@ -74,7 +74,7 @@ export default function OpengraphImage() {
             color: "#9ca3af",
           }}
         >
-          React · Next.js · Tailwind CSS
+          Next.js · React · TypeScript
         </div>
       </div>
     ),

@@ -22,12 +22,14 @@ export const metadata: Metadata = {
     template: "%s | Hamam Sadek",
   },
   description:
-    "Portfolio of Hamam Sadek, a Front-End Developer specializing in React, Next.js and Tailwind CSS — building fast, accessible and beautiful web interfaces.",
+    "Front-End Developer (Next.js, React, TypeScript) shipping full-stack web apps with PostgreSQL and Prisma. Solo-built Orderly, a multi-tenant restaurant SaaS.",
   keywords: [
     "Hamam Sadek",
     "Front-End Developer",
     "React Developer",
     "Next.js Developer",
+    "TypeScript Developer",
+    "Full-Stack Developer",
     "Web Developer",
     "Portfolio",
     "Tailwind CSS",
@@ -40,14 +42,14 @@ export const metadata: Metadata = {
     url: siteUrl,
     title: "Hamam Sadek — Front-End Developer",
     description:
-      "Front-End Developer specializing in React, Next.js and Tailwind CSS. Explore my projects and skills.",
+      "Front-End Developer — Next.js, React, TypeScript. Production web apps end to end, up to backend and database. See live projects.",
     siteName: "Hamam Sadek",
   },
   twitter: {
     card: "summary_large_image",
     title: "Hamam Sadek — Front-End Developer",
     description:
-      "Front-End Developer specializing in React, Next.js and Tailwind CSS.",
+      "Front-End Developer — Next.js, React, TypeScript. Full-stack with PostgreSQL, Prisma and Supabase.",
   },
   robots: {
     index: true,
