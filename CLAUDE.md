@@ -83,5 +83,7 @@
 - 2026-10-06 — Motion exception: project screenshots pan through the page on
   mouse hover in 1.2s (rule says 200–400ms). It shows the whole screen, runs
   once per hover, and is off on touch and with reduced motion.
-- 2026-10-06 — Copy: no em dashes (—) in visible text; user reads them as
-  AI-written. Date ranges keep the en dash (–).
+- 2026-10-06 — Copy: no dash or underscore punctuation in visible text
+  (—, " - ", _); user reads them as AI-written. Exception the user chose:
+  date ranges keep the en dash (Sep 2026 – Oct 2026). Hyphens inside words
+  are fine.
