@@ -14,7 +14,15 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-/* Person JSON-LD — only facts that are visible on this page. */
+/* WebSite JSON-LD: gives Google the site name to show in results. */
+const websiteLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE.name,
+  url: SITE.url,
+};
+
+/* Person JSON-LD: only facts that are visible on this page. */
 const personLd = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -44,6 +52,10 @@ const personLd = {
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}

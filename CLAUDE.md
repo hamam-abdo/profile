@@ -39,8 +39,8 @@
   (old skill logos and grain `h.png` are no longer used). UI is
   mono — `#e6e9ef` on ink `#0a0a0f`; the only hues are teal `#0bd1d1` /
   violet `#c4b5fd` inside the hero code card (globals.css `@theme`, mirrored
-  in `src/constants/tokens.ts`). No logo or photo — favicon is "HS" from
-  `src/app/icon.tsx`
+  in `src/constants/tokens.ts`). No logo or photo — favicon is the "HS" mark:
+  `src/app/icon.png` (512), `apple-icon.png` (180), `favicon.ico` (16/32/48)
 - i18n: next-intl (for any multi-language site — don't pick another library)
   - UI components: shadcn/ui in `components/ui/`, one component per file
 

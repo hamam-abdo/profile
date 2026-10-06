@@ -1,6 +1,6 @@
 /*
- * Colour tokens for places that can't read CSS variables: generated images
- * (Open Graph, favicon) and the viewport theme colour. Values must match the
+ * Colour tokens for places that can't read CSS variables: the generated
+ * Open Graph image and the viewport theme colour. Values must match the
  * @theme block in src/app/globals.css — change both together.
  */
 export const colors = {

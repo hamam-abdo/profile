@@ -21,8 +21,10 @@ export const metadata: Metadata = {
     default: "Hamam Sadek | Front-End Developer",
     template: "%s | Hamam Sadek",
   },
+  applicationName: SITE.name,
+  // Mirrors the hero: the claim plus both proofs (Orderly, client work)
   description:
-    "Front-End Developer (Next.js, React, TypeScript) shipping full-stack web apps with PostgreSQL and Prisma. Solo-built Orderly, a multi-tenant restaurant SaaS.",
+    "Front-End Developer shipping web apps end to end with Next.js, React and TypeScript. Solo-built Orderly, a multi-tenant SaaS, and a client website + admin CMS.",
   keywords: [
     "Hamam Sadek",
     "Front-End Developer",
@@ -34,21 +36,21 @@ export const metadata: Metadata = {
     "Portfolio",
     "Tailwind CSS",
   ],
-  authors: [{ name: "Hamam Sadek" }],
-  creator: "Hamam Sadek",
+  authors: [{ name: SITE.name }],
+  creator: SITE.name,
   openGraph: {
     type: "website",
     url: "/",
     title: "Hamam Sadek | Front-End Developer",
     description:
-      "Front-End Developer: Next.js, React, TypeScript. Production web apps end to end, up to backend and database. See live projects.",
-    siteName: "Hamam Sadek",
+      "Front-End Developer building production web apps end to end, from interface to database. Live projects: Orderly SaaS and a client site with admin CMS.",
+    siteName: SITE.name,
   },
   twitter: {
     card: "summary_large_image",
     title: "Hamam Sadek | Front-End Developer",
     description:
-      "Front-End Developer: Next.js, React, TypeScript. Full-stack with PostgreSQL, Prisma and Supabase.",
+      "Front-End Developer building production web apps end to end, from interface to database. Live projects: Orderly SaaS and a client site with admin CMS.",
   },
   // Previews are noindex; canonical is set per page (see app/page.tsx)
   robots: { index: isIndexable, follow: isIndexable },
