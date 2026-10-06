@@ -9,6 +9,8 @@ type RevealProps = {
   as?: keyof HTMLElementTagNameMap;
 };
 
+/* Fades content in the first time it scrolls into view, then stops
+   observing. Reduced motion is handled once, globally, in globals.css. */
 export default function Reveal({
   children,
   className = "",
@@ -22,15 +24,6 @@ export default function Reveal({
     const node = ref.current;
     if (!node) return;
 
-    // Respect users who prefer reduced motion
-    const reduce = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-    if (reduce) {
-      setVisible(true);
-      return;
-    }
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -38,7 +31,7 @@ export default function Reveal({
           observer.disconnect();
         }
       },
-      { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
+      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
     );
 
     observer.observe(node);
@@ -51,7 +44,7 @@ export default function Reveal({
     <Tag
       ref={ref as React.RefObject<HTMLDivElement>}
       className={`reveal ${visible ? "reveal-visible" : ""} ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}
     </Tag>

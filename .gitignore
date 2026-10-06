@@ -31,6 +31,9 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+# public, non-secret: the site origin (read by metadata, sitemap, robots)
+!.env.production
+!.env.development
 
 # vercel
 .vercel

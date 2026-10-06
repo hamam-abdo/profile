@@ -1,8 +1,9 @@
 import { ImageResponse } from "next/og";
+import { colors } from "@/constants/tokens";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Hamam Sadek — Front-End Developer";
+export const alt = "Hamam Sadek | Front-End Developer";
 
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -15,9 +16,8 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          backgroundColor: "#0a0a0f",
-          backgroundImage:
-            "radial-gradient(900px circle at 20% 0%, rgba(14,165,234,0.30), transparent 45%), radial-gradient(900px circle at 90% 100%, rgba(11,209,209,0.25), transparent 45%)",
+          backgroundColor: colors.canvas,
+          borderTop: `16px solid ${colors.fg}`,
           fontFamily: "sans-serif",
         }}
       >
@@ -26,7 +26,7 @@ export default function OpengraphImage() {
             display: "flex",
             alignItems: "center",
             gap: 14,
-            color: "#0bd1d1",
+            color: colors.muted,
             fontSize: 30,
             fontWeight: 600,
           }}
@@ -36,7 +36,7 @@ export default function OpengraphImage() {
               width: 14,
               height: 14,
               borderRadius: 999,
-              background: "#0ea5ea",
+              background: colors.fg,
             }}
           />
           Portfolio
@@ -47,7 +47,7 @@ export default function OpengraphImage() {
             marginTop: 24,
             fontSize: 96,
             fontWeight: 800,
-            color: "white",
+            color: colors.fg,
             lineHeight: 1.05,
           }}
         >
@@ -59,9 +59,7 @@ export default function OpengraphImage() {
             marginTop: 20,
             fontSize: 44,
             fontWeight: 700,
-            background: "linear-gradient(90deg, #0ea5ea, #0bd1d1)",
-            backgroundClip: "text",
-            color: "transparent",
+            color: colors.muted,
           }}
         >
           Front-End Developer
@@ -71,7 +69,7 @@ export default function OpengraphImage() {
           style={{
             marginTop: 28,
             fontSize: 28,
-            color: "#9ca3af",
+            color: colors.muted,
           }}
         >
           Next.js · React · TypeScript
