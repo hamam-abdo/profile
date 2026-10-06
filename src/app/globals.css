@@ -20,8 +20,8 @@
      line 1.30 — decorative dividers only
 ----------------------------------------------------------------- */
 
-/* Font families reference next/font variables set on <body>, so they are
-   inlined into utilities instead of resolved on :root.
+/* Font families reference next/font variables set on <html>, and are
+   inlined into utilities.
    shadcn/ui colour names map onto the design tokens below — restyle
    primitives here, not by rewriting them. */
 @theme inline {
@@ -123,6 +123,14 @@ body {
    Primitives in components/ui carry their own; this base-layer rule
    covers plain links and is overridden by any utility. */
 @layer base {
+  /* Preflight gives code/pre their own mono stack; use Geist Mono instead */
+  code,
+  kbd,
+  samp,
+  pre {
+    font-family: var(--font-geist-mono), ui-monospace, monospace;
+  }
+
   :focus-visible {
     outline: 2px solid var(--color-fg);
     outline-offset: 3px;
