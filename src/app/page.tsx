@@ -19,6 +19,8 @@ const websiteLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: SITE.name,
+  // Other names Google may match the site by
+  alternateName: [`${SITE.name} Portfolio`, new URL(SITE.url).host],
   url: SITE.url,
 };
 
