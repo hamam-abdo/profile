@@ -87,3 +87,7 @@
   (—, " - ", _); user reads them as AI-written. Exception the user chose:
   date ranges keep the en dash (Sep 2026 – Oct 2026). Hyphens inside words
   are fine.
+- 2026-10-07 — Fonts: Geist woff2 subset to Latin (~35 KB each) with
+  `display: "optional"`. Measured on mobile with network throttling:
+  CLS 0.196 → 0, score ~83 → ~94. Trade-off: a slow first visit shows the
+  Arial-based fallback for that view only.

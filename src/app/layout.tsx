@@ -4,18 +4,22 @@ import "./globals.css";
 import { colors } from "@/constants/tokens";
 import { SITE, isIndexable } from "@/lib/site";
 
-// Geist woff2 subset to Latin + arrows (~35 KB each instead of ~67 KB), so
-// the fonts arrive sooner and the font-swap re-layout lands earlier.
+// Geist woff2 subset to Latin + arrows (~35 KB each instead of ~67 KB).
+// display "optional": if the font isn't ready in the first ~100ms (slow
+// first visit), that view keeps the metric-matched fallback instead of
+// swapping — swap shifted the hero (CLS 0.196) and re-laid out the page.
 // Re-subset if the copy ever needs other scripts (e.g. Arabic).
 const geistSans = localFont({
   src: "./fonts/Geist-Variable.woff2",
   variable: "--font-geist-sans",
   weight: "100 900",
+  display: "optional",
 });
 const geistMono = localFont({
   src: "./fonts/GeistMono-Variable.woff2",
   variable: "--font-geist-mono",
   weight: "100 900",
+  display: "optional",
 });
 
 export const metadata: Metadata = {
