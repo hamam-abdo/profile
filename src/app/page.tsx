@@ -7,6 +7,7 @@ import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { experience, profile, projects, socialLinks } from "@/constants";
 import { SITE } from "@/lib/site";
 
@@ -63,13 +64,28 @@ export default function Home() {
       <Header />
       <main id="main" className="container">
         <Hero />
-        <Experience />
-        <Projects />
-        <Engagements />
-        <Skills />
-        <Contact />
+        {/* Each Suspense boundary hydrates as its own unit, so React can yield
+            between sections instead of hydrating the whole page in one long
+            main-thread task (Total Blocking Time on mobile). */}
+        <Suspense fallback={null}>
+          <Experience />
+        </Suspense>
+        <Suspense fallback={null}>
+          <Projects />
+        </Suspense>
+        <Suspense fallback={null}>
+          <Engagements />
+        </Suspense>
+        <Suspense fallback={null}>
+          <Skills />
+        </Suspense>
+        <Suspense fallback={null}>
+          <Contact />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </>
   );
 }
