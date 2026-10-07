@@ -149,10 +149,6 @@ body {
     animation: none !important;
     transition: none !important;
   }
-  .reveal {
-    opacity: 1 !important;
-    transform: none !important;
-  }
 }
 
 /* ----------------------------------------------------------------
@@ -174,22 +170,6 @@ body {
 /* ----------------------------------------------------------------
    Components
 ----------------------------------------------------------------- */
-
-/* Scroll entrance — runs once. Only hidden when scripts run, so the page
-   is fully readable without JS. */
-@media (scripting: enabled) {
-  .reveal {
-    opacity: 0;
-    transform: translateY(16px);
-    transition:
-      opacity 0.5s var(--ease-out),
-      transform 0.5s var(--ease-out);
-  }
-  .reveal-visible {
-    opacity: 1;
-    transform: none;
-  }
-}
 
 /* Component classes live in the components layer so utilities on the
    same element (text-muted, text-sm…) can override them. */

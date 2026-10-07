@@ -1,52 +1,18 @@
-"use client";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 type RevealProps = {
   children: ReactNode;
   className?: string;
-  /** delay in ms before the element animates in */
+  /** Unused since the scroll entrance was removed; kept so call sites compile. */
   delay?: number;
   as?: keyof HTMLElementTagNameMap;
 };
 
-/* Fades content in the first time it scrolls into view, then stops
-   observing. Reduced motion is handled once, globally, in globals.css. */
-export default function Reveal({
-  children,
-  className = "",
-  delay = 0,
-  as = "div",
-}: RevealProps) {
-  const ref = useRef<HTMLElement | null>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
-    );
-
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, []);
-
+/* Plain server-rendered wrapper. The scroll-entrance version was a client
+   component with an IntersectionObserver per instance (20 on the page); its
+   hydration and re-renders were the largest piece of Total Blocking Time on
+   mobile, so the entrance was dropped (see CLAUDE.md, 2026-10-07). */
+export default function Reveal({ children, className, as = "div" }: RevealProps) {
   const Tag = as as "div";
-
-  return (
-    <Tag
-      ref={ref as React.RefObject<HTMLDivElement>}
-      className={`reveal ${visible ? "reveal-visible" : ""} ${className}`}
-      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
-    >
-      {children}
-    </Tag>
-  );
+  return <Tag className={className}>{children}</Tag>;
 }

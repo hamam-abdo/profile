@@ -43,8 +43,10 @@ function ProjectLinks({ project }: { project: Project }) {
   );
 }
 
-/* The screenshot is a link to the live app; hovering pans the page. */
+/* The screenshot is a link to the live app; hovering pans the page.
+   Only main-tier projects carry a screenshot (`imge`). */
 function Shot({ project, sizes }: { project: Project; sizes: string }) {
+  if (!("imge" in project) || !project.imge) return null;
   return (
     <a
       href={project.live}
@@ -55,7 +57,7 @@ function Shot({ project, sizes }: { project: Project; sizes: string }) {
     >
       <BrowserFrame
         src={project.imge}
-        alt={`${project.title}: ${"subtitle" in project ? project.subtitle : project.description}`}
+        alt={`${project.title}: ${"subtitle" in project ? project.subtitle : "live site"}`}
         url={project.live}
         shot={"shot" in project ? project.shot : undefined}
         sizes={sizes}

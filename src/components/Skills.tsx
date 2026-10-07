@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { cvSkills, education, languages } from "@/constants";
 import { proofFor, type SkillProof } from "@/lib/skill-proof";
 import Reveal from "./Reveal";
@@ -9,29 +10,31 @@ const hit =
   "relative after:absolute after:-inset-x-1 after:-inset-y-[15px] after:content-['']";
 
 function ProofLinks({ proof }: { proof: SkillProof }) {
+  const links = [
+    ...proof.work.map((p) => ({ key: p.name, href: p.href, label: p.name })),
+    ...(proof.earlier > 0
+      ? [{
+          key: "earlier",
+          href: "#more-work",
+          label: `${proof.earlier} earlier ${proof.earlier === 1 ? "site" : "sites"}`,
+        }]
+      : []),
+  ];
   return (
-    <span className="flex flex-wrap items-baseline gap-x-1.5 text-xs text-muted">
-      <span>Used in</span>
-      {proof.work.map((p, i) => (
-        <span key={p.name}>
+    <p className="text-xs text-muted">
+      Used in{" "}
+      {links.map((l, i) => (
+        <Fragment key={l.key}>
+          {i > 0 && ", "}
           <a
-            href={p.href}
+            href={l.href}
             className={`${hit} text-fg underline decoration-line-strong underline-offset-2 hover:decoration-fg`}
           >
-            {p.name}
+            {l.label}
           </a>
-          {(i < proof.work.length - 1 || proof.earlier > 0) && ","}
-        </span>
+        </Fragment>
       ))}
-      {proof.earlier > 0 && (
-        <a
-          href="#more-work"
-          className={`${hit} text-fg underline decoration-line-strong underline-offset-2 hover:decoration-fg`}
-        >
-          {proof.earlier} earlier {proof.earlier === 1 ? "site" : "sites"}
-        </a>
-      )}
-    </span>
+    </p>
   );
 }
 

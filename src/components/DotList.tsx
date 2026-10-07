@@ -1,27 +1,16 @@
-import { Fragment } from "react";
-
-/* "Next.js · React · Tailwind CSS" that never breaks inside a name and
-   never leaves a "·" dangling at the end of a line: each item is
-   unbreakable and carries its separator in front; lines break only at
-   the plain space between items. */
+/* "Next.js · React · Tailwind CSS" as one text node: spaces inside a name
+   are non-breaking and each "·" is glued to the item after it, so a line
+   never splits a name or ends on a dangling "·". One node instead of a
+   span per item keeps the DOM (and hydration) small. */
 export default function DotList({
   items,
-  className = "",
+  className,
 }: {
   items: string[];
   className?: string;
 }) {
-  return (
-    <span className={className}>
-      {items.map((item, i) => (
-        <Fragment key={item}>
-          {i > 0 && " "}
-          <span className="whitespace-nowrap">
-            {i > 0 && "· "}
-            {item}
-          </span>
-        </Fragment>
-      ))}
-    </span>
-  );
+  const text = items
+    .map((item) => item.replace(/ /g, "\u00a0"))
+    .join(" \u00b7\u00a0");
+  return className ? <span className={className}>{text}</span> : <>{text}</>;
 }

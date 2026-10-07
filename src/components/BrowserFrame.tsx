@@ -30,11 +30,11 @@ export default function BrowserFrame({
   return (
     <div className="overflow-hidden rounded-lg border border-line bg-surface">
       <div className="flex items-center gap-3 border-b border-line px-3 py-2">
-        <span aria-hidden="true" className="flex gap-1.5">
-          <span className="h-2 w-2 rounded-full bg-line" />
-          <span className="h-2 w-2 rounded-full bg-line" />
-          <span className="h-2 w-2 rounded-full bg-line" />
-        </span>
+        {/* three window dots drawn by one element (shadows) to keep the DOM small */}
+        <span
+          aria-hidden="true"
+          className="ms-0.5 h-2 w-2 shrink-0 rounded-full bg-line shadow-[14px_0_0_var(--color-line),28px_0_0_var(--color-line)] me-7"
+        />
         <span className="truncate rounded-sm bg-sunken px-2 py-0.5 font-mono text-2xs text-muted">
           {host}
         </span>

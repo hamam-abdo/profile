@@ -20,6 +20,11 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
   display: "optional",
+  // next/font's default fallback is metric-adjusted Arial, which isn't
+  // monospace — code would lose its shape whenever "optional" keeps the
+  // fallback. Fall back to the system mono stack instead.
+  adjustFontFallback: false,
+  fallback: ["ui-monospace", "SFMono-Regular", "Menlo", "Consolas", "monospace"],
 });
 
 export const metadata: Metadata = {

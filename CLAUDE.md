@@ -91,3 +91,8 @@
   `display: "optional"`. Measured on mobile with network throttling:
   CLS 0.196 → 0, score ~83 → ~94. Trade-off: a slow first visit shows the
   Arial-based fallback for that view only.
+- 2026-10-07 — Performance (mobile TBT ~800ms on PageSpeed): dropped the
+  scroll-entrance animation — `Reveal` is now a plain server wrapper (its 20
+  client instances were the largest hydration cost); tool lists render as
+  one text node; Geist Mono falls back to the system mono stack. Unused
+  images removed from `public/`.

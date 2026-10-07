@@ -347,7 +347,6 @@ export const projects = [
     live: "https://test-834f5.web.app/",
     video:
       "https://www.linkedin.com/posts/hamam-abdulrahman-b1467b25b_technology-development-programming-activity-7226992840717815808-8p8t?utm_source=share&utm_medium=member_desktop",
-    imge: "/Order.png",
   },
   {
     title: "Primary",
@@ -357,7 +356,6 @@ export const projects = [
     tier: "more",
     tech: ["HTML", "CSS"],
     live: "https://hamam-abdo.github.io/Primary/",
-    imge: "/Primary.png",
   },
   {
     title: "DGcom",
@@ -367,7 +365,6 @@ export const projects = [
     tier: "more",
     tech: ["HTML", "CSS"],
     live: "https://hamam-abdo.github.io/DGcom/",
-    imge: "/DGcom.png",
   },
   {
     title: "Pioneer",
@@ -377,7 +374,6 @@ export const projects = [
     tier: "more",
     tech: ["HTML", "CSS"],
     live: "https://hamam-abdo.github.io/Pioneer/",
-    imge: "/Pioneer.png",
   },
   {
     title: "Special Design",
@@ -387,7 +383,6 @@ export const projects = [
     tier: "more",
     tech: ["HTML", "CSS", "JavaScript"],
     live: "https://hamam-abdo.github.io/Special-Design/",
-    imge: "/Special.png",
   },
   {
     title: "BigTech",
@@ -397,7 +392,6 @@ export const projects = [
     tier: "more",
     tech: ["HTML", "CSS", "JavaScript"],
     live: "https://hamam-abdo.github.io/BigTech/",
-    imge: "/BigTech.png",
   },
   {
     title: "Artelligence",
@@ -407,7 +401,6 @@ export const projects = [
     tier: "more",
     tech: ["HTML", "CSS", "JavaScript"],
     live: "https://hamam-abdo.github.io/Artelligence/",
-    imge: "/Artelligence.png",
   },
   {
     title: "Techwix",
@@ -417,7 +410,6 @@ export const projects = [
     tier: "more",
     tech: ["HTML", "CSS", "JavaScript"],
     live: "https://hamam-abdo.github.io/Techwix/",
-    imge: "/Techwix.png",
   },
 ];
 
