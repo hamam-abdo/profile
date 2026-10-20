@@ -10,7 +10,7 @@ export const profile = {
   stack: ["Next.js", "React", "TypeScript"],
   tagline:
     "I build fast, responsive web apps with Next.js, React 19, TypeScript and Tailwind CSS, extending into full-stack delivery with PostgreSQL, Prisma, Drizzle and Supabase.",
-  bio: "I'm a Front-End Developer with 2 years of experience building fast, responsive web apps with Next.js, React 19, TypeScript and Tailwind CSS, extending into full-stack delivery with PostgreSQL, Prisma, Drizzle and Supabase. I solo-built Orderly, a multi-tenant restaurant SaaS with real-time orders, role-based dashboards, an offline-first PWA, AI menu tools and Arabic/English RTL, and delivered a production website with an admin CMS for a security research company.",
+  bio: "I'm a Front-End Developer with 2 years of experience building fast, responsive web apps with Next.js, React 19, TypeScript and Tailwind CSS, extending into full-stack delivery with PostgreSQL, Prisma, Drizzle and Supabase. I solo-built Orderly, a multi-tenant restaurant SaaS with real-time orders, role-based dashboards, an offline-first PWA, AI menu tools and Arabic/English RTL, and delivered production websites with admin dashboards for a clothing wholesaler (with a Telegram publishing bot) and a security research company.",
   email: "hamamabdo002@gmail.com",
   cv: "/Hamam_Sadek_CV.pdf",
   city: "Cairo, Egypt",
@@ -40,6 +40,43 @@ export const navLinks = [
 
 /* Experience ------------------------------------------------------ */
 export const experience = [
+  {
+    role: "Full-Stack Developer (Freelance)",
+    company: "Alhalabi Fashion",
+    url: "https://alhalabifashion.com/",
+    // Public homepage only — never the admin or the bot.
+    imge: "/Alhalabi.png",
+    shot: [1440, 900],
+    period: "Oct 2026 – Present",
+    links: [{ label: "alhalabifashion.com", url: "https://alhalabifashion.com/" }],
+    tech: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS v4",
+      "Prisma",
+      "Neon PostgreSQL",
+      "Auth.js",
+      "Zod",
+      "grammY (Telegram Bot API)",
+      "UploadThing",
+      "sharp",
+      "Vitest",
+    ],
+    // Same tools as `tech`, grouped by role for display
+    stackGroups: [
+      { label: "Front-end", items: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4"] },
+      { label: "Back-end & data", items: ["Prisma", "Neon PostgreSQL", "Auth.js", "Zod"] },
+      { label: "Bot, media & tests", items: ["grammY (Telegram Bot API)", "UploadThing", "sharp", "Vitest"] },
+    ],
+    points: [
+      "Built the live catalog site, admin panel and Telegram bot for a Cairo clothing wholesaler and retailer, end to end from database to deployment.",
+      "Arabic RTL, mobile-first catalog: category tabs, word-based Arabic search that folds spelling variants and synonyms, a swipe photo gallery, and an order sheet that opens WhatsApp with the chosen model, photo and size.",
+      "Staff publish from Telegram: the bot reads an album and caption (name, price, sizes, material), shows a preview, then posts to the site and to channels by category. Distributor channels get each model with their own price markup.",
+      "Admin on its own subdomain with Google sign-in and an allow list checked in every Server Action; one service layer shared by the admin and the bot, with a change history per model.",
+      "Images compressed in the browser, then resized to WebP with sharp; static pages revalidated on demand, LocalBusiness JSON-LD and an image sitemap.",
+    ],
+  },
   {
     role: "Full-Stack Developer (Freelance)",
     company: "Zerodroid Labs",
@@ -100,9 +137,12 @@ export const engagements = [
   {
     title: "Website + admin CMS",
     summary:
-      "A public site with instant publishing from an admin dashboard, with no redeploys.",
-    tags: ["Next.js", "Drizzle ORM", "Auth.js", "Zod"],
-    proofs: [{ name: "Zerodroid Labs", href: "#experience" }],
+      "A public site with instant publishing from an admin dashboard or a Telegram bot, with no redeploys.",
+    tags: ["Next.js", "Auth.js", "Zod", "Telegram bot"],
+    proofs: [
+      { name: "Alhalabi Fashion", href: "#experience" },
+      { name: "Zerodroid Labs", href: "#experience" },
+    ],
   },
   {
     title: "E-commerce store",

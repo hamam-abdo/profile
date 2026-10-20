@@ -29,11 +29,11 @@ export default function Hero() {
             , a multi-tenant restaurant SaaS
             {experience.length > 0 && (
               <>
-                , and delivered a{" "}
+                , and delivered{" "}
                 <a href="#experience" className="link">
-                  production website with an admin CMS
+                  production websites with admin dashboards
                 </a>{" "}
-                for a security research company
+                for a clothing wholesaler and a security research company
               </>
             )}
             .

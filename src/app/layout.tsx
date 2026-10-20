@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   applicationName: SITE.name,
   // Mirrors the hero: the claim plus both proofs (Orderly, client work)
   description:
-    "Front-End Developer shipping web apps end to end with Next.js, React and TypeScript. Solo-built Orderly, a multi-tenant SaaS, and a client website + admin CMS.",
+    "Front-End Developer shipping web apps end to end with Next.js, React and TypeScript. Solo-built Orderly, a multi-tenant SaaS, and client sites with admin dashboards.",
   keywords: [
     "Hamam Sadek",
     "Front-End Developer",
@@ -55,14 +55,14 @@ export const metadata: Metadata = {
     url: "/",
     title: "Hamam Sadek | Front-End Developer",
     description:
-      "Front-End Developer building production web apps end to end, from interface to database. Live projects: Orderly SaaS and a client site with admin CMS.",
+      "Front-End Developer building production web apps end to end, from interface to database. Live projects: Orderly SaaS and client sites with admin dashboards.",
     siteName: SITE.name,
   },
   twitter: {
     card: "summary_large_image",
     title: "Hamam Sadek | Front-End Developer",
     description:
-      "Front-End Developer building production web apps end to end, from interface to database. Live projects: Orderly SaaS and a client site with admin CMS.",
+      "Front-End Developer building production web apps end to end, from interface to database. Live projects: Orderly SaaS and client sites with admin dashboards.",
   },
   // Previews are noindex; canonical is set per page (see app/page.tsx)
   robots: { index: isIndexable, follow: isIndexable },

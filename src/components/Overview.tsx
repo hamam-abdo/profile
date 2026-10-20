@@ -8,7 +8,7 @@ function CodeCard({ footer }: { footer?: React.ReactNode }) {
   const { role, stack, city, availability } = profile;
   const shipped = [
     projects.find((p) => p.featured)?.title,
-    experience[0]?.company,
+    ...experience.map((job) => job.company),
   ].filter(Boolean) as string[];
 
   const str = (v: string) => (

@@ -11,6 +11,17 @@ test("hero states the role and the claim", async ({ page }) => {
   await expect(page.getByText("Front-End Developer").first()).toBeVisible();
 });
 
+test("client work shows Alhalabi Fashion with its live site", async ({ page }) => {
+  const section = page.locator("#experience");
+  await section.scrollIntoViewIfNeeded();
+  await expect(
+    section.getByRole("heading", { name: "Alhalabi Fashion" })
+  ).toBeVisible();
+  await expect(
+    section.getByRole("link", { name: /alhalabifashion\.com/ }).first()
+  ).toHaveAttribute("href", /^https:\/\/alhalabifashion\.com/);
+});
+
 test("client work shows Zerodroid Labs with its live site", async ({ page }) => {
   const section = page.locator("#experience");
   await section.scrollIntoViewIfNeeded();

@@ -14,7 +14,7 @@ export default function Experience() {
     <section id="experience" className="scroll-mt-20 pt-24 sm:pt-32">
       <SectionHeading
         title="Client work"
-        intro="Production website and admin CMS, built end to end from database to deployment."
+        intro="Production websites with admin dashboards, built end to end from database to deployment."
         component="ClientWork"
       />
 

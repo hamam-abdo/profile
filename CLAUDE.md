@@ -4,9 +4,10 @@
 
 - **What it is:** Portfolio of Hamam Sadek — front-end developer (2 years)
   who ships production web apps end to end with Next.js, React and
-  TypeScript, up to backend and database. Proof: a production site + admin
-  CMS delivered for a client (Zerodroid Labs), and Orderly, a multi-tenant
-  restaurant SaaS built solo.
+  TypeScript, up to backend and database. Proof: production sites with
+  admin dashboards delivered for clients (Alhalabi Fashion, with a Telegram
+  publishing bot; Zerodroid Labs), and Orderly, a multi-tenant restaurant
+  SaaS built solo.
 - **Who reads it, and what they're deciding:**
   - a tech recruiter or hiring manager deciding whether to interview him
     for a front-end / full-stack role
